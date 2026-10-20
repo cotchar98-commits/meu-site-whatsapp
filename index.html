@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e91e63">
+
+  <title>Achadinhos de Mercado | Ofertas e Economia</title>
+  <meta name="description" content="Confira achadinhos, ofertas de supermercado e produtos para economizar no dia a dia. Entre no nosso grupo!">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --pink: #e91e63;
+      --pink-dark: #c2185b;
+      --yellow: #ffdf35;
+      --green: #128c4a;
+      --text: #30252b;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff7fa;
+    }
+
+    .topbar {
+      background: linear-gradient(110deg, #e91e63, #ff4081);
+      padding: 14px 16px;
+      text-align: center;
+      color: white;
+    }
+
+    .topbar a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 430px;
+      padding: 15px 18px;
+      border-radius: 50px;
+      background: #128c4a;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 5px 15px #8c124422;
+      transition: transform .2s, background .2s;
+    }
+
+    .topbar a:hover {
+      background: #075e36;
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-icon {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 38px 20px 30px;
+      text-align: center;
+      background: linear-gradient(145deg, #ffedf3, #ffd6e5);
+    }
+
+    .label {
+      display: inline-block;
+      background: var(--yellow);
+      color: #5c3b00;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .7px;
+    }
+
+    h1 {
+      margin: 18px auto 12px;
+      max-width: 600px;
+      color: var(--pink-dark);
+      font-size: clamp(32px, 7vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -1.3px;
+    }
+
+    .hero p {
+      max-width: 500px;
+      margin: 0 auto 24px;
+      color: #654751;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 680px;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px #9e24501c;
+    }
+
+    .section {
+      max-width: 760px;
+      padding: 30px 20px;
+      margin: auto;
+    }
+
+    .section h2 {
+      margin: 0 0 20px;
+      text-align: center;
+      color: var(--pink-dark);
+      font-size: 25px;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .benefit {
+      padding: 20px 10px;
+      background: white;
+      border: 1px solid #f7d6e2;
+      border-radius: 17px;
+      text-align: center;
+      box-shadow: 0 5px 18px #7b23400a;
+    }
+
+    .benefit .emoji {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #a51c51;
+      font-size: 14px;
+    }
+
+    .benefit span:last-child {
+      font-size: 12px;
+      color: #76636b;
+      line-height: 1.5;
+    }
+
+    .cta {
+      margin: 0 20px 30px;
+      padding: 28px 20px;
+      border-radius: 22px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(120deg, #d81b60, #f50057);
+    }
+
+    .cta h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+    }
+
+    .cta p {
+      margin: 0 auto 20px;
+      max-width: 440px;
+      line-height: 1.6;
+      color: #fff0f5;
+    }
+
+    .cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 16px 22px;
+      border-radius: 50px;
+      background: var(--yellow);
+      color: #493600;
+      font-weight: 900;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .cta a:hover {
+      background: #fff09b;
+    }
+
+    footer {
+      padding: 0 20px 24px;
+      text-align: center;
+      color: #8d727d;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 520px) {
+      .photo {
+        height: 230px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 14px;
+        padding: 15px;
+      }
+
+      .benefit .emoji {
+        margin: 0;
+      }
+
+      .benefit div {
+        flex: 1;
+      }
+
+      .cta a {
+        width: 100%;
+        padding: 15px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTAO DO WHATSAPP NO TOPO -->
+  <header class="topbar">
+    <a href="https://chat.whatsapp.com/COLOQUE_SEU_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <svg class="whatsapp-icon" viewBox="0 0 32 32"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true">
+        <path fill="currentColor"
+          d="M16 .8A15.1 15.1 0 0 0 3 23.6L.9 31l7.6-2A15.1 15.1 0 1 0 16 .8Z"/>
+        <path fill="#128c4a"
+          d="M16 3.3A12.6 12.6 0 0 0 5.2 22.4L4 26.8l4.5-1.2A12.6 12.6 0 1 0 16 3.3Z"/>
+        <path fill="currentColor"
+          d="M22.9 18.8c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.5-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.6l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.8c.2.2 2.5 3.9 6.1 5.4 3.6 1.4 3.6 1 4.3.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z"/>
+      </svg>
+
+      ENTRAR NO GRUPO DE OFERTAS
+    </a>
+  </header>
+
+  <!-- APRESENTACAO -->
+  <main>
+    <section class="hero">
+      <span class="label">🛒 ACHADINHOS DO DIA</span>
+
+      <h1>Economize mais nas suas compras! 💗</h1>
+
+      <p>
+        Os melhores achadinhos de mercado, produtos úteis
+        e ofertas para deixar seu dinheiro render.
+      </p>
+
+      <!-- FOTO REALISTA DE SUPERMERCADO BRASILEIRO -->
+      <img
+        class="photo"
+        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=85"
+        alt="Frutas, verduras e produtos frescos em um mercado"
+        fetchpriority="high"
+      >
+    </section>
+
+    <!-- VANTAGENS DO GRUPO -->
+    <section class="section">
+      <h2>Tem achadinho bom por aqui! ✨</h2>
+
+      <div class="benefits">
+        <article class="benefit">
+          <span class="emoji">🛍️</span>
+          <div>
+            <strong>Ofertas de mercado</strong>
+            <span>Produtos e promoções para suas compras.</span>
+          </div>
+        </article>
+
+        <article class="benefit">
+          <span class="emoji">💰</span>
+          <div>
+            <strong>Mais economia</strong>
+            <span>Ideias para gastar menos no dia a dia.</span>
+          </div>
+        </article>
+
+        <article class="benefit">
+          <span class="emoji">💖</span>
+          <div>
+            <strong>Achadinhos especiais</strong>
+            <span>Descobertas úteis para você e sua casa.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEGUNDO BOTAO -->
+    <section class="cta">
+      <h2>Venha fazer parte! 💕</h2>
+      <p>
+        Entre no nosso grupo e acompanhe os achadinhos
+        compartilhados com a comunidade.
+      </p>
+
+      <a href="https://chat.whatsapp.com/COLOQUE_SEU_LINK"
+         target="_blank"
+         rel="noopener noreferrer">
+        💚 QUERO ENTRAR NO WHATSAPP
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Ofertas e preços podem mudar conforme a loja e a região.<br>
+    Confira as condições antes de comprar.<br>
+    Feito com carinho para quem ama economizar 💗
+  </footer>
+
+</body>
+</html>
